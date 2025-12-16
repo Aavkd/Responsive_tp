@@ -251,6 +251,7 @@
                 <li><a href="#how-it-works">How it Works</a></li>
                 <li><a href="#capabilities">Capabilities</a></li>
                 <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#rag-chat">RAG Chat</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
@@ -426,6 +427,21 @@
                         </ul>
                         <p class="card-footer">Reusable across future searches. <strong>Your knowledge compounds over
                                 time.</strong></p>
+                    </article>
+
+                    <!-- Card 4 - RAG Chat -->
+                    <article class="card glass">
+                        <div class="card-icon">💬</div>
+                        <h3 class="card-title">RAG-Powered Chat</h3>
+                        <p class="card-text">Talk to your research documents:</p>
+                        <ul class="card-list">
+                            <li>Ask questions in natural language</li>
+                            <li>Get answers grounded in your sources</li>
+                            <li>Semantic search with vector embeddings</li>
+                            <li>Follow-up conversations with context</li>
+                            <li>Source citations for every answer</li>
+                        </ul>
+                        <p class="card-footer">Your documents become a <strong>conversation partner.</strong></p>
                     </article>
                 </div>
             </div>
@@ -622,6 +638,86 @@
             </div>
         </section>
 
+        <!-- RAG CHAT SECTION -->
+        <section class="section section-rag" id="rag-chat">
+            <div class="container">
+                <div class="rag-layout">
+                    <div class="rag-content">
+                        <h2 class="section-title text-left">Chat With Your <span class="gradient-text">Research</span>
+                        </h2>
+                        <p class="lead-text">
+                            Your documents are more than files.<br>
+                            <strong>They're a conversation partner.</strong>
+                        </p>
+                        <p class="rag-intro">DeepSearch AI uses <strong>Retrieval-Augmented Generation (RAG)</strong> to
+                            let you query your research library naturally:</p>
+                        <ul class="feature-list">
+                            <li>Ask questions about your collected sources</li>
+                            <li>Get answers grounded in your verified documents</li>
+                            <li>Semantic search across all your research projects</li>
+                            <li>Follow-up conversations with context memory</li>
+                            <li>Source citations for every answer</li>
+                        </ul>
+                        <div class="rag-tech">
+                            <h4>Under the Hood</h4>
+                            <div class="tech-badges">
+                                <span class="tech-badge glass-light">
+                                    <span class="badge-icon">🧬</span>
+                                    <span class="badge-text">Vector Embeddings</span>
+                                </span>
+                                <span class="tech-badge glass-light">
+                                    <span class="badge-icon">🔍</span>
+                                    <span class="badge-text">Semantic Search</span>
+                                </span>
+                                <span class="tech-badge glass-light">
+                                    <span class="badge-icon">🧠</span>
+                                    <span class="badge-text">Local LLM Inference</span>
+                                </span>
+                            </div>
+                            <p class="tech-note">Powered by customizable embedding models like
+                                <code>embeddinggemma:latest</code> — all running locally on your machine.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="rag-visual">
+                        <div class="chat-mockup glass">
+                            <div class="chat-header">
+                                <span class="chat-dot"></span>
+                                <span class="chat-dot"></span>
+                                <span class="chat-dot"></span>
+                                <span class="chat-title">RAG Chat — Project: API Research</span>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="chat-bubble user">
+                                    What are the main differences between REST and GraphQL based on my sources?
+                                </div>
+                                <div class="chat-bubble ai">
+                                    <p>Based on your collected research documents:</p>
+                                    <p><strong>REST</strong> uses multiple endpoints with fixed data structures, while
+                                        <strong>GraphQL</strong> provides a single endpoint where clients specify
+                                        exactly what data they need.
+                                    </p>
+                                    <p class="source-ref">📄 Sources: api_comparison.md, graphql_docs.md</p>
+                                </div>
+                                <div class="chat-bubble user">
+                                    Which one is better for mobile apps?
+                                </div>
+                                <div class="chat-bubble ai typing">
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                </div>
+                            </div>
+                            <div class="chat-input-mock">
+                                <span>Ask your documents...</span>
+                                <span class="send-icon">➤</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CONTACT FORM SECTION -->
         <section class="section section-contact" id="contact">
             <div class="container">
@@ -684,6 +780,18 @@
                         <div class="faq-answer">
                             <p>Anyone who needs reliable, explainable, reusable knowledge — from developers to
                                 researchers.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is RAG and how does it work?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>RAG (Retrieval-Augmented Generation) lets you chat with your research documents. Your
+                                sources are converted into vector embeddings, enabling semantic search. When you ask a
+                                question, the most relevant passages are retrieved and fed to the LLM, ensuring answers
+                                are grounded in your verified data.</p>
                         </div>
                     </div>
                 </div>

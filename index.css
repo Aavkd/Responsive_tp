@@ -823,11 +823,11 @@ button {
 }
 
 /* =====================================================
-   Cards Grid (3 Cards Section)
+   Cards Grid (4 Cards Section)
    ===================================================== */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl);
 }
 
@@ -1174,6 +1174,228 @@ button {
 }
 
 /* =====================================================
+   RAG Chat Section
+   ===================================================== */
+.section-rag {
+    background: linear-gradient(180deg, rgba(10, 10, 16, 0.3) 0%, transparent 100%);
+}
+
+.rag-layout {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3xl);
+}
+
+.rag-content {
+    flex: 1;
+}
+
+.rag-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.rag-intro {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.rag-tech {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--glass-border);
+}
+
+.rag-tech h4 {
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.tech-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+}
+
+.badge-icon {
+    font-size: var(--font-size-base);
+}
+
+.badge-text {
+    color: var(--color-text-secondary);
+}
+
+.tech-note {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.tech-note code {
+    font-family: var(--font-mono);
+    background: rgba(34, 211, 238, 0.1);
+    color: var(--color-accent-cyan);
+    padding: 0.15em 0.4em;
+    border-radius: var(--radius-sm);
+    font-size: 0.9em;
+}
+
+/* Chat Mockup Styling */
+.chat-mockup {
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.chat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-accent-cyan);
+    opacity: 0.6;
+}
+
+.chat-dot:nth-child(2) {
+    background: var(--color-accent-purple);
+}
+
+.chat-dot:nth-child(3) {
+    background: var(--color-accent-pink);
+}
+
+.chat-title {
+    margin-left: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+.chat-messages {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.chat-bubble {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+.chat-bubble.user {
+    background: var(--gradient-primary);
+    color: var(--color-bg-primary);
+    align-self: flex-end;
+    border-bottom-right-radius: var(--radius-sm);
+}
+
+.chat-bubble.ai {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-primary);
+    align-self: flex-start;
+    border-bottom-left-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+}
+
+.chat-bubble.ai p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.chat-bubble.ai p:last-child {
+    margin-bottom: 0;
+}
+
+.source-ref {
+    font-size: var(--font-size-xs);
+    color: var(--color-accent-cyan);
+    font-family: var(--font-mono);
+    opacity: 0.8;
+}
+
+/* Typing Animation */
+.chat-bubble.typing {
+    display: flex;
+    gap: 4px;
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent-cyan);
+    animation: typingBounce 1.4s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    30% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+}
+
+.chat-input-mock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--glass-border);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.send-icon {
+    color: var(--color-accent-cyan);
+    font-size: var(--font-size-lg);
+}
+
+/* =====================================================
    Contact Form Section
    ===================================================== */
 .contact-subtitle {
@@ -1435,6 +1657,30 @@ button {
 
     .knowledge-features {
         grid-template-columns: 1fr;
+    }
+
+    /* RAG Section Responsive */
+    .rag-layout {
+        flex-direction: column;
+        gap: var(--spacing-2xl);
+    }
+
+    .rag-content {
+        text-align: center;
+    }
+
+    .rag-content .feature-list {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rag-content .section-title {
+        text-align: center;
+    }
+
+    .tech-badges {
+        justify-content: center;
     }
 
     .sidebar {
