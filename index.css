@@ -909,87 +909,32 @@ button {
     gap: var(--spacing-4xl);
 }
 
-.split-image,
+.split-image {
+    flex: 1.5;
+}
+
 .split-content {
     flex: 1;
 }
 
-/* Scraper Mockup with CRT Effect */
-.scraper-mockup {
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    position: relative;
-}
-
-.scraper-mockup::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(0deg,
-            transparent,
-            transparent 2px,
-            rgba(0, 0, 0, 0.1) 2px,
-            rgba(0, 0, 0, 0.1) 4px);
-    pointer-events: none;
-    z-index: 5;
-}
-
-.mockup-header {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background: rgba(0, 0, 0, 0.4);
-    border-bottom: 1px solid var(--glass-border);
-}
-
-.mockup-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.dot-red {
-    background: rgba(255, 95, 87, 0.8);
-}
-
-.dot-yellow {
-    background: rgba(254, 188, 46, 0.8);
-}
-
-.dot-green {
-    background: rgba(40, 200, 64, 0.8);
-}
-
-.mockup-title {
-    margin-left: var(--spacing-md);
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-    font-family: var(--font-mono);
-}
-
-.mockup-content {
-    padding: var(--spacing-xl);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-}
-
-.mockup-line {
-    height: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-sm);
+/* Scraper Image Styles */
+.scraper-image {
     width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(34, 211, 238, 0.1);
+    transition: all var(--transition-base);
+    object-fit: cover;
 }
 
-.mockup-line.active {
-    background: var(--gradient-primary);
-    box-shadow: var(--glow-cyan);
-}
-
-.mockup-line.skip {
-    background: rgba(255, 95, 87, 0.3);
-    width: 60%;
+.scraper-image:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(34, 211, 238, 0.2);
 }
 
 .split-benefits {
