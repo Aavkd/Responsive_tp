@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DeepSearch AI - An AI-powered deep research platform that goes beyond search engines. Get structured answers, curated sources, and traceable reasoning.">
+    <meta name="keywords" content="AI research, deep search, knowledge management, source validation, local LLM">
+    <title>DeepSearch AI — Search Less. Understand More.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- HEADER / NAVBAR -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🔬</span>
+                <span class="logo-text">DeepSearch<span class="logo-ai">AI</span></span>
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-cta">
+                <a href="#" class="btn btn-outline">Launch Scraper</a>
+                <a href="#" class="btn btn-primary">Start Deep Search</a>
+            </div>
+            
+            <button class="burger-menu" id="burger-menu" aria-label="Toggle menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content container">
+                <h1 class="hero-title">
+                    Search Less.<br>
+                    <span class="gradient-text">Understand More.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    An AI-powered deep research platform that goes beyond search engines —
+                    structured answers, curated sources, and traceable reasoning, in one place.
+                </p>
+                <p class="hero-text">
+                    DeepSearch AI transforms how you explore information.
+                    Instead of returning links, it builds knowledge: crawling trusted sources, 
+                    structuring data, and reasoning across documents — locally, securely, and transparently.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary btn-large">Start a Deep Search</a>
+                    <a href="#how-it-works" class="btn btn-outline btn-large">See How It Works</a>
+                </div>
+            </div>
+            <div class="hero-glow"></div>
+        </section>
+
+        <!-- WHAT IS DEEP SEARCH SECTION -->
+        <section class="section section-what" id="what">
+            <div class="container">
+                <h2 class="section-title">What Is <span class="gradient-text">Deep Search</span>?</h2>
+                <div class="what-content">
+                    <p class="lead-text">
+                        Traditional search engines stop at results.<br>
+                        <strong>Deep Search goes further.</strong>
+                    </p>
+                    <ul class="feature-list">
+                        <li>Breaks down your question into research steps</li>
+                        <li>Identifies authoritative sources</li>
+                        <li>Extracts, compares, and validates information</li>
+                        <li>Produces structured, explainable answers</li>
+                        <li>Stores results in a reusable knowledge library</li>
+                    </ul>
+                    <p class="highlight-text">You don't just get answers — you get <span class="gradient-text">understanding</span>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE CAPABILITIES - 3 CARDS SECTION -->
+        <section class="section section-capabilities" id="capabilities">
+            <div class="container">
+                <h2 class="section-title">Core <span class="gradient-text">Capabilities</span></h2>
+                <div class="cards-grid">
+                    <!-- Card 1 - AI Research Agent -->
+                    <article class="card">
+                        <div class="card-icon">🤖</div>
+                        <h3 class="card-title">Autonomous Research Agents</h3>
+                        <p class="card-text">Your question is converted into a research plan. Each agent:</p>
+                        <ul class="card-list">
+                            <li>Defines sub-questions</li>
+                            <li>Searches relevant sources</li>
+                            <li>Extracts key facts</li>
+                            <li>Cross-checks contradictions</li>
+                            <li>Documents its reasoning</li>
+                        </ul>
+                        <p class="card-footer">No black box. <strong>Full traceability.</strong></p>
+                    </article>
+
+                    <!-- Card 2 - Interactive Scraper -->
+                    <article class="card card-featured">
+                        <div class="card-icon">🎯</div>
+                        <h3 class="card-title">Human-in-the-Loop Scraping</h3>
+                        <p class="card-text">Control what the AI keeps:</p>
+                        <ul class="card-list">
+                            <li>Review extracted content</li>
+                            <li>Skip irrelevant sections</li>
+                            <li>Add verified sources to your library</li>
+                            <li>Build trusted datasets step by step</li>
+                        </ul>
+                        <p class="card-footer">Perfect for documentation, monitoring, and analysis.</p>
+                    </article>
+
+                    <!-- Card 3 - Knowledge Library -->
+                    <article class="card">
+                        <div class="card-icon">📚</div>
+                        <h3 class="card-title">Your Private Research Memory</h3>
+                        <p class="card-text">Everything you validate is stored:</p>
+                        <ul class="card-list">
+                            <li>Structured notes</li>
+                            <li>Source links</li>
+                            <li>Summaries</li>
+                            <li>Extracted facts</li>
+                        </ul>
+                        <p class="card-footer">Reusable across future searches. <strong>Your knowledge compounds over time.</strong></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE SCRAPER DETAIL - 50/50 SPLIT -->
+        <section class="section section-split" id="scraper">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="split-image">
+                        <div class="scraper-mockup">
+                            <div class="mockup-header">
+                                <span class="mockup-dot dot-red"></span>
+                                <span class="mockup-dot dot-yellow"></span>
+                                <span class="mockup-dot dot-green"></span>
+                                <span class="mockup-title">Interactive Scraper</span>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="mockup-line active"></div>
+                                <div class="mockup-line"></div>
+                                <div class="mockup-line skip"></div>
+                                <div class="mockup-line active"></div>
+                                <div class="mockup-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-content">
+                        <h2 class="section-title text-left">Interactive Scraping, <span class="gradient-text">Done Right</span></h2>
+                        <p class="lead-text">
+                            Most scrapers blindly collect data.<br>
+                            <strong>DeepSearch AI puts you in control.</strong>
+                        </p>
+                        <p>For every source:</p>
+                        <ul class="feature-list">
+                            <li>Preview extracted content</li>
+                            <li>Accept or reject sections</li>
+                            <li>Tag and categorize information</li>
+                            <li>Link content to a research session</li>
+                        </ul>
+                        <div class="split-benefits">
+                            <div class="benefit">
+                                <span class="benefit-icon">✓</span>
+                                <span>Higher signal-to-noise ratio</span>
+                            </div>
+                            <div class="benefit">
+                                <span class="benefit-icon">✓</span>
+                                <span>Zero hallucinated sources</span>
+                            </div>
+                            <div class="benefit">
+                                <span class="benefit-icon">✓</span>
+                                <span>Clean, reusable datasets</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section class="section section-steps" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Ask Anything</h3>
+                        <p class="step-text">Start with a question, topic, or hypothesis.</p>
+                        <div class="step-examples">
+                            <span>"What are the limits of GitHub Pages?"</span>
+                            <span>"Compare open-source LLM frameworks"</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Research Plan Generation</h3>
+                        <p class="step-text">The AI generates a plan with search queries, target sources, and validation steps.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Source Exploration</h3>
+                        <p class="step-text">The agent browses documentation, extracts data, and flags uncertainty.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Review & Curation</h3>
+                        <p class="step-text">You decide what gets saved, ignored, or becomes part of your knowledge base.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3 class="step-title">Final Answer</h3>
+                        <p class="step-text">Receive a clear synthesized response with source-backed claims and exportable notes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIVACY & LOCAL AI SECTION -->
+        <section class="section section-privacy" id="privacy">
+            <div class="container">
+                <div class="privacy-content">
+                    <div class="privacy-icon">🔐</div>
+                    <h2 class="section-title">Privacy-First by <span class="gradient-text">Design</span></h2>
+                    <p class="lead-text">Your research stays yours.</p>
+                    <div class="privacy-features">
+                        <div class="privacy-feature">
+                            <span class="privacy-badge">Local LLM</span>
+                            <p>Local inference support</p>
+                        </div>
+                        <div class="privacy-feature">
+                            <span class="privacy-badge">Self-Hosted</span>
+                            <p>Self-hosted deployments</p>
+                        </div>
+                        <div class="privacy-feature">
+                            <span class="privacy-badge">No Tracking</span>
+                            <p>No data resale or hidden tracking</p>
+                        </div>
+                    </div>
+                    <p class="privacy-footer">Whether you're a researcher, developer, or analyst — your data never leaves your control.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- USE CASES SECTION -->
+        <section class="section section-usecases" id="use-cases">
+            <div class="container">
+                <h2 class="section-title">Built For <span class="gradient-text">You</span></h2>
+                <div class="usecase-grid">
+                    <div class="usecase-card">
+                        <div class="usecase-icon">💻</div>
+                        <h3>Developers</h3>
+                        <ul>
+                            <li>Documentation analysis</li>
+                            <li>Framework comparison</li>
+                            <li>API research</li>
+                            <li>Technical deep dives</li>
+                        </ul>
+                    </div>
+                    <div class="usecase-card">
+                        <div class="usecase-icon">🔬</div>
+                        <h3>Researchers</h3>
+                        <ul>
+                            <li>Literature review</li>
+                            <li>Source validation</li>
+                            <li>Knowledge synthesis</li>
+                            <li>Hypothesis exploration</li>
+                        </ul>
+                    </div>
+                    <div class="usecase-card">
+                        <div class="usecase-icon">📊</div>
+                        <h3>Product & Strategy</h3>
+                        <ul>
+                            <li>Market analysis</li>
+                            <li>Competitive intelligence</li>
+                            <li>Tech monitoring</li>
+                            <li>Trend detection</li>
+                        </ul>
+                    </div>
+                    <div class="usecase-card">
+                        <div class="usecase-icon">⚖️</div>
+                        <h3>Legal & Compliance</h3>
+                        <ul>
+                            <li>Regulatory research</li>
+                            <li>Policy comparison</li>
+                            <li>Source traceability</li>
+                            <li>Audit-ready docs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KNOWLEDGE REUSE SECTION -->
+        <section class="section section-knowledge" id="knowledge">
+            <div class="container">
+                <div class="knowledge-content">
+                    <h2 class="section-title">Knowledge That <span class="gradient-text">Grows With You</span></h2>
+                    <p class="lead-text">Every research session feeds your library.</p>
+                    <div class="knowledge-features">
+                        <div class="knowledge-feature">
+                            <span class="k-icon">🔄</span>
+                            <span>Reuse validated sources</span>
+                        </div>
+                        <div class="knowledge-feature">
+                            <span class="k-icon">📁</span>
+                            <span>Build thematic collections</span>
+                        </div>
+                        <div class="knowledge-feature">
+                            <span class="k-icon">🚀</span>
+                            <span>Start new searches from past knowledge</span>
+                        </div>
+                        <div class="knowledge-feature">
+                            <span class="k-icon">📤</span>
+                            <span>Export structured data</span>
+                        </div>
+                    </div>
+                    <p class="knowledge-tagline">DeepSearch AI becomes your <strong>second brain</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
+        <section class="section section-contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="contact-subtitle">Have questions, ideas, or custom needs? Let's talk.</p>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION (BONUS) -->
+        <section class="section section-faq" id="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is this just another search engine?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No. DeepSearch AI focuses on reasoning, source validation, and knowledge building — not link ranking.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can I run it locally?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Local inference and self-hosted deployments are fully supported.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How are sources handled?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>All sources are transparent, reviewable, and manually curatable.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Who is this for?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Anyone who needs reliable, explainable, reusable knowledge — from developers to researchers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🔬</span>
+                    <span class="logo-text">DeepSearch<span class="logo-ai">AI</span></span>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 DeepSearch AI — All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Burger menu toggle
+        const burgerMenu = document.getElementById('burger-menu');
+        const navLinks = document.getElementById('nav-links');
+        const header = document.getElementById('header');
+
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                burgerMenu.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isOpen = faqItem.classList.contains('open');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('open');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Toggle current item
+                if (!isOpen) {
+                    faqItem.classList.add('open');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
