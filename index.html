@@ -8,7 +8,223 @@
         content="DeepSearch AI - An AI-powered deep research platform that goes beyond search engines. Get structured answers, curated sources, and traceable reasoning.">
     <meta name="keywords" content="AI research, deep search, knowledge management, source validation, local LLM">
     <title>DeepSearch AI — Search Less. Understand More.</title>
-    <link rel="stylesheet" href="index.css">
+
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Load Google Fonts with font-display swap -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Critical CSS inline for above-the-fold content -->
+    <style>
+        /* Critical CSS - Above the fold styles */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #050508;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .space-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            background: radial-gradient(ellipse at 50% 0%, #0d0d1a 0%, #050508 60%);
+            overflow: hidden;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 1.5rem;
+            transition: all 300ms ease;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 1.5rem;
+        }
+
+        .logo-ai {
+            color: #22d3ee;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 80px 1.5rem 3rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 200;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(34, 211, 238, 0.2);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #9ca3af;
+            text-decoration: none;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 300ms ease;
+            white-space: nowrap;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+            color: #050508;
+        }
+
+        .btn-outline {
+            border: 1.5px solid #22d3ee;
+            color: #22d3ee;
+            background: transparent;
+        }
+
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .burger-line {
+            width: 24px;
+            height: 2px;
+            background: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: #0a0a10;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .burger-menu {
+                display: flex;
+            }
+        }
+    </style>
+
+    <!-- Main stylesheet - loaded with lower priority -->
+    <link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="index.css">
+    </noscript>
 </head>
 
 <body>
@@ -220,8 +436,12 @@
             <div class="container">
                 <div class="split-layout">
                     <div class="split-image">
-                        <img src="interactive_scraper.png" alt="Interactive Scraper Interface"
-                            class="scraper-image glass" loading="lazy">
+                        <picture>
+                            <source srcset="interactive_scraper.webp" type="image/webp">
+                            <img src="interactive_scraper.png" alt="Interactive Scraper Interface"
+                                class="scraper-image glass" loading="lazy" decoding="async" fetchpriority="low"
+                                width="1200" height="671">
+                        </picture>
                     </div>
                     <div class="split-content">
                         <h2 class="section-title text-left">Interactive Scraping, <span class="gradient-text">Done
@@ -499,79 +719,86 @@
     </div>
 
     <script>
-        // Burger menu toggle
-        const burgerMenu = document.getElementById('burger-menu');
-        const navLinks = document.getElementById('nav-links');
-        const header = document.getElementById('header');
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cache DOM elements
+            const burgerMenu = document.getElementById('burger-menu');
+            const navLinks = document.getElementById('nav-links');
+            const header = document.getElementById('header');
+            const searchForm = document.getElementById('search-form');
 
-        burgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            burgerMenu.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                burgerMenu.classList.remove('active');
+            // Burger menu toggle
+            burgerMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burgerMenu.classList.toggle('active');
             });
-        });
 
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                const isOpen = faqItem.classList.contains('open');
-
-                // Close all other items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('open');
-                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-                });
-
-                // Toggle current item
-                if (!isOpen) {
-                    faqItem.classList.add('open');
-                    button.setAttribute('aria-expanded', 'true');
+            // Close menu when clicking a link (event delegation)
+            navLinks.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    navLinks.classList.remove('active');
+                    burgerMenu.classList.remove('active');
                 }
             });
-        });
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            // Header scroll effect with passive listener and throttling
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        header.classList.toggle('scrolled', window.scrollY > 50);
+                        ticking = false;
                     });
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // FAQ Accordion with event delegation
+            const faqContainer = document.querySelector('.faq-container');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const button = e.target.closest('.faq-question');
+                    if (!button) return;
+
+                    const faqItem = button.parentElement;
+                    const isOpen = faqItem.classList.contains('open');
+
+                    // Close all other items
+                    faqContainer.querySelectorAll('.faq-item.open').forEach(item => {
+                        item.classList.remove('open');
+                        item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Toggle current item
+                    if (!isOpen) {
+                        faqItem.classList.add('open');
+                        button.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+
+            // Smooth scroll for anchor links (event delegation on document)
+            document.addEventListener('click', (e) => {
+                const anchor = e.target.closest('a[href^="#"]');
+                if (!anchor) return;
+
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
-        });
 
-        // Search form animation
-        const searchForm = document.getElementById('search-form');
-        searchForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const query = document.getElementById('user-input').value;
-            if (query) {
-                console.log('Searching for:', query);
-                // Add visual feedback
-                searchForm.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    searchForm.style.transform = 'scale(1)';
-                }, 150);
+            // Search form animation
+            if (searchForm) {
+                searchForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const query = document.getElementById('user-input').value;
+                    if (query) {
+                        searchForm.style.transform = 'scale(0.98)';
+                        setTimeout(() => searchForm.style.transform = '', 150);
+                    }
+                });
             }
         });
     </script>

@@ -3,8 +3,11 @@
    Glassmorphism + CRT Effects + Space Background
    ===================================================== */
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+/* 
+   Fonts are loaded via HTML <link> tags with font-display: swap
+   for non-render-blocking behavior. See index.html <head> section.
+   Font families used: Inter, JetBrains Mono
+*/
 
 /* CSS Custom Properties (Design Tokens) */
 :root {
@@ -142,6 +145,7 @@ button {
 
 /* =====================================================
    Space Background with Animated Stars
+   Optimized for GPU acceleration
    ===================================================== */
 .space-bg {
     position: fixed;
@@ -149,6 +153,8 @@ button {
     z-index: -10;
     background: radial-gradient(ellipse at 50% 0%, #0d0d1a 0%, var(--color-bg-primary) 60%);
     overflow: hidden;
+    contain: strict;
+    will-change: auto;
 }
 
 .stars {
@@ -167,6 +173,8 @@ button {
         radial-gradient(2px 2px at 500px 100px, rgba(255, 255, 255, 0.9), transparent);
     background-size: 550px 250px;
     animation: twinkle 8s ease-in-out infinite;
+    will-change: opacity;
+    transform: translateZ(0);
 }
 
 .stars-layer-2 {
@@ -200,6 +208,9 @@ button {
     filter: blur(80px);
     opacity: 0.15;
     animation: float 20s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
+    contain: layout style;
 }
 
 .nebula-1 {
